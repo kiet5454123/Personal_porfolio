@@ -1,0 +1,365 @@
+/* background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222)); 
+ground: background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+left-mountain: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255))
+back-mountain: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255))
+peguin-head: linear-gradient(45deg,
+    var(--penguin-skin),
+    rgb(239, 240, 228))
+peguin-body: background: linear-gradient(45deg,
+    rgb(134, 133, 133) 0%,
+    rgb(234, 231, 231) 25%,
+    white 67%);
+arm: background: linear-gradient(90deg,
+    var(--penguin-skin),
+    rgb(209, 210, 199));*/
+
+:root {
+    --penguin-face: white;
+    --penguin-picorna: orange;
+    --penguin-skin: gray;
+    --sun-color: radial-gradient(circle closest-corner at 85% 55%,
+            #ffcf33,
+            #ffcf33 20%,
+            #ffff66 21%,
+            #bbeeff 100%);
+    --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+    animation: colors 30s  infinite linear;
+}
+
+body{
+    background:linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.left-mountain{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
+    position: absolute;
+    transform: skew(0deg,44deg);
+    margin-top: 100px;
+    z-index: 2;
+}
+.back-mountain{
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
+    position: absolute;
+    transform: rotate(45deg);
+    margin-top: 150px;
+    left:8%;
+    z-index: 1;
+}
+
+.sun{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+    background: var(--sun-color);
+    position: absolute;
+    top: -15%;
+    z-index: 0;
+}
+.penguin {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 75px;
+    position: relative;
+    z-index: 4;
+}
+.penguin-head{
+    width: 50%;
+    height: 45%;
+    background:linear-gradient(45deg,
+            var(--penguin-skin),
+            rgb(239, 240, 228));
+    border-radius: 70% 70% 65% 65%;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    z-index: 5;
+}
+.face{
+    width: 60%;
+    height: 70%;
+    background-color: white;
+    border-radius: 70% 70% 60% 60%;
+    top: 15%;
+}
+.face.left{
+    position: absolute;
+    left: 7%;
+}
+.face.right{
+    position: absolute;
+    right: 7%;
+}
+.eye{
+    width: 15%;
+    height: 17%;
+    background-color: black;
+    position: absolute;
+    top: 45%;
+    border-radius: 50%;
+    z-index: 5;
+}
+.eye.left{
+    left: 25%;
+}
+.eye.right{
+    right: 25%;
+}
+.eye-flip{
+    width: 18%;
+    height: 17%;
+    background-color: white;
+    position: absolute;
+    top: 48.5%;
+    border-radius: 50%;
+    z-index: 5;
+}
+.eye-flip.left{
+    left: 24%;
+}
+.eye-flip.right{
+    right: 24%;
+}
+.chin{
+    width: 85%;
+    height: 75%;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top:20%;
+    left:7%;
+}
+.flush{
+    width: 15%;
+    height: 10%;
+    background-color: pink;
+    border-radius: 100% 120% 100% 120%;
+    position: absolute;
+    top:65%;
+    z-index: 5;
+}
+.flush.left{
+    left:17%;
+}
+.flush.right{ 
+    right: 17%;
+}
+.noise{
+    background-color: orange;
+    position: absolute;
+    z-index: 5; 
+}
+.noise.top{
+    width: 20%;
+    height: 10%;
+    top: 60%;
+    left: 41%;
+    border-radius: 80%;
+}
+.noise.bottom{
+    width: 17%;
+    height: 10%;
+    top: 65%;
+    left: 43%;
+    border-radius: 80%;
+}
+.foot {
+    width: 15%;
+    height: 30%;
+    border-radius: 50%;
+    background-color: orange;
+    position: absolute;
+    top:85%;
+    z-index: -1;
+}
+.foot.left{
+    left: 15%;
+    transform: rotate(80deg);
+}
+.foot.right{
+    right:15%;
+        transform: rotate(-80deg);
+}
+.arm {
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    background: linear-gradient(90deg,
+                var(--penguin-skin),
+                rgb(209, 210, 199));
+    position: absolute;
+    top:40%;
+    z-index: 3;
+}
+.arm.left{
+    left: 5%;
+    transform-origin: top left;
+    transform: rotate(130deg) scaleX(-1);
+    animation: wave 3s linear infinite;
+    z-index: -1;
+}
+.arm.right{
+    right:5%;
+    transform-origin: top left;
+    transform: rotate(-60deg);
+    z-index: -1;
+}
+
+.penguin-body{
+    width: 57%;
+    height: 53%;
+    background: linear-gradient(45deg,
+                rgb(134, 133, 133) 0%,
+                rgb(234, 231, 231) 25%,
+                white 67%);
+    border-radius: 70% 70% 65% 65%;
+    position: absolute;
+    top:35%;
+    left: 11.5%;
+}
+.penguin-body::before{
+    content: "";
+    width: 50%;
+    height: 28%;
+    background-color: grey;
+    border-radius: 0% 0% 100% 100%;
+    position: absolute;
+    top: 27%;
+    left: 25%;
+}
+.text{
+    width: 17px;
+    position: absolute;
+    top: 55%;
+    left: 33%;
+    font: bold 25px Helvetica, sans-serif;
+    color: #6a6969;
+}
+.text div{
+    position: absolute;
+    top:20%;
+    left: 50%;
+    font: normal;
+}
+.ground{
+    width: 100%;
+    height: 400px;
+    background: var(--ground-color);
+    position: absolute;
+    margin-top: -58px;
+    z-index: 3;
+    animation: grounds 30s linear infinite;
+}
+@keyframes wave {
+    10% {
+        transform: rotate(110deg) scaleX(-1);
+    }
+
+    20% {
+        transform: rotate(140deg) scaleX(-1);
+    }
+
+    30% {
+        transform: rotate(110deg) scaleX(-1);
+    }
+
+    40% {
+        transform: rotate(130deg) scaleX(-1);
+    }
+}
+@keyframes colors {
+    10% {
+            --sun-color: radial-gradient(circle closest-corner at 75% 35%,
+                    #ffcf33,
+                    #ffcf33 20%,
+                    #ffff66 21%,
+                    #bbeeff 100%);
+            --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+        }
+        20% {
+            --sun-color: radial-gradient(circle closest-corner at 65% 25%,
+                        #ffcf33,
+                        #ffcf33 20%,
+                        #ffff66 21%,
+                        #bbeeff 70%);
+            --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+        }
+    
+        30% {
+            --sun-color: radial-gradient(circle closest-corner at 55% 15%,
+                        #ffcf33,
+                        #ffcf33 20%,
+                        #ffff66 21%,
+                        #bbeeff 80%);
+            --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+        }
+    
+        40% {
+--sun-color: radial-gradient(circle closest-corner at 45% 10%,
+            #ffcf33,
+            #ffcf33 20%,
+            #ffff66 21%,
+            #bbeeff 100%);    
+        --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));    }
+    
+        50% {
+--sun-color: radial-gradient(circle closest-corner at 35% 25%,
+            #ffcf33,
+            #ffcf33 20%,
+            #ffff66 21%,
+            #bbeeff 60%);
+        --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));        }
+    
+        60% {
+        --sun-color: radial-gradient(circle closest-corner at 25% 35%,
+            #ffcf33,
+            #ffcf33 20%,
+            #ffff66 21%,
+            #bbeeff 30%);
+            --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+        }
+        70% {
+            --sun-color: radial-gradient(circle closest-corner at 15% 45%,
+                        #ccc,
+                        #ccc 20%,
+                        #445 21%,
+                        #223 100%);
+            --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(55, 57, 57));
+        }
+    
+        80% {
+            --sun-color: radial-gradient(circle closest-corner at 10% 55%,
+                        #ccc,
+                            #ccc 20%,
+                            #445 21%,
+                            #223 100%);
+            --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(55, 57, 57));
+        }
+        90% {
+            --sun-color: radial-gradient(circle closest-corner at 10% 55%,
+                        #ccc,
+                        #ccc 20%,
+                        #445 21%,
+                        #223 100%);
+        --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(55, 57, 57));
+          }
+        100% {
+            --sun-color: radial-gradient(circle closest-corner at 85% 65%,
+                    #ffcf33,
+                    #ffcf33 20%,
+                    #ffff66 21%,
+                    #bbeeff 100%);
+        --ground-color: linear-gradient(90deg, rgb(88, 175, 236), rgb(163, 178, 178));
+          }
+}

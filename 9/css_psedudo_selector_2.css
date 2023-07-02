@@ -1,0 +1,111 @@
+/* 0a0a23
+0a0a23
+fff
+356eaf
+0a0a23
+linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem) */
+body{
+    margin: 0;
+    box-sizing: border-box;
+        font-family: sans-serif;
+}
+main{
+    width: 60%;
+    max-width: 650px;
+    margin:10px auto;
+    border: 1px solid #0a0a23;
+    padding-bottom: 10px;
+}
+h1{
+    width: 100%;
+    color: #0a0a23;
+    padding: 0.75em;
+    margin: 0;
+}
+.flex{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+}
+.flex span:first-of-type{
+    font-size: 0.5em;
+}
+.flex span:last-of-type{
+    font-size: 1.8rem;
+}
+#years{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #0a0a23;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 0.75rem;
+}
+.year{
+    width: 4.5rem;
+    text-align: right;
+    font-weight: bold;
+}
+table{
+    width: calc(100% - 12px);
+    position: relative;
+    margin: auto;
+    margin-top: 3rem;
+    border-collapse: collapse;
+    border: 0;
+}
+caption{
+    position: absolute;
+    top: -2.25rem;
+    left: 0.5rem;
+    font-size: 1.2rem;
+    color: #356eaf;
+}
+.sr-only{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: 0;
+    padding: 0;
+    margin: -1px;
+    position: absolute;
+    border: 0;
+}
+tr[class="data"]{
+    background: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+tr[class="data"] th{
+    padding: 0.5rem 0.5rem 0;
+    vertical-align: top;
+}
+tr[class="data"] .description{
+    font-weight: normal;
+    display: block;
+    background-color: white;
+    padding: 1rem 0 0.75rem;
+    margin-right: -13.75rem;
+    margin-top: 5px;
+}
+tr[class="total"]{
+    border-bottom: 4px double #0a0a23;
+    padding: 0.5rem 0.5rem 0 0 ;
+}
+tr th{
+    text-align: left;
+    padding: 0.5rem  0  1rem  0.5rem ;
+}
+tr[class="total"] td{
+    font-weight: bold;
+}
+tr[class="total"]:hover{
+    background-color: #6da2de;
+}
+tr td{
+    width: 12rem;
+    max-width: 4rem;
+    min-width: 4rem;
+    text-align: right;
+    padding: 0.5rem 0.5rem 0;
+    vertical-align: top;
+}

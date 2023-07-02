@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.header{
+    padding: 20px;
+    color: #f5f6f7;
+    background-color: #0a0a23;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 5px solid #fdb347;
+}
+/* Định dạng hình ảnh */
+.gallery img{
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/* Định dạng cách hiển thị hình ảnh */
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+}
+/* Sẽ được xem như là một phần tử cuối cùng của element */
+.gallery::after{
+    content: "";
+    width: 350px;
+}

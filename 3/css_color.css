@@ -1,0 +1,45 @@
+.container{
+    text-align: center;
+    width: 100%;
+}
+h1{
+    text-align: center;
+}
+
+.marker{
+    width: 500px;
+    height: 25px;
+    background-color: black;
+    margin: 10px auto;
+}
+.one{
+    background: linear-gradient(180deg, rgb(122, 74, 14),
+        rgb(245, 62, 113),
+        rgb(162, 27, 27));
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+.two{
+    background: linear-gradient(#55680D,
+        #71F53E,
+        #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+.three{
+    background: linear-gradient(hsl(186, 76%, 16%),
+        hsl(223, 90%, 60%),
+        hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 blue;
+}
+.cap, .sleeve{
+    display: inline-block;
+}
+.cap{
+    width: 100px;
+    height: 25px;
+}
+.sleeve{
+    width: 300px;
+    height: 25px;
+    background: rgba(255,255,255,0.5);
+    border-left: 10px double black;
+}

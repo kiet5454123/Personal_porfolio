@@ -1,0 +1,124 @@
+/* f5f6f7
+1b1b32
+        font-family: Helvetica;
+0a0a23
+f1be32
+dfdfe2
+d0d0d5
+3b3b4f
+2a2a40 */
+body{
+    background-color: #f5f6f7;
+    color: #1b1b32;
+    font-family: Helvetica;
+    margin: 0;
+    width: 100%;
+}
+header{
+    display: flex;
+    background-color: #1b1b32;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0;
+}
+#logo{
+    width: max(100px, 18vw);
+    background-color: #0a0a23;
+    aspect-ratio: 35/4;
+    padding: 0.4rem;
+}
+h1{
+    color: #f1be32;
+    text-align: center;
+    font-size: min(5vw, 1.2em);
+}
+nav{
+    width: 50%;
+    max-width:300px;
+}
+nav>ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline-start: 0;
+    height: 40px;
+    align-items: center;
+    vertical-align: middle;
+}
+nav>ul>li a{
+    text-decoration: none;
+    color: #dfdfe2;
+    padding: 10px;
+}
+nav>ul>li a:hover{
+    color:#0a0a23;
+    background-color: #d0d0d5;
+}
+main{
+    padding-top: 50px;
+    width: 50%;
+    max-width: 650px;
+    margin:auto;
+}
+h2{
+    border-bottom: 4px solid #d0d0d5;
+    margin: 4rem 0 2rem 0;
+}
+.info{
+    display: block;
+    margin: 10px 0;
+}
+.info input, .info label{
+    display: inline-block;
+    font-size: 16px;
+}
+.info label{
+    width: 10%;
+    text-align: right;
+}
+.info input{
+    width: 50%;
+}
+p::before{
+    content: "Question#";
+    padding-left: 15px;
+}
+p{
+    font-size: 1.3rem;
+}
+fieldset{
+    border: 0;
+    padding-bottom: 0;
+}
+.question-block{
+    padding: 0 10px;
+    text-align: left;
+    display: block;
+}
+.answer{
+    padding: 0 10px 10px 10px;
+}
+.answer-list{
+    list-style: none;
+    padding: 0;
+}
+button{
+    border:2px solid #1b1b32;
+    background-color:#d0d0d5;
+    width: 250px;
+    height: 50px;
+    font-size: 1.6rem;
+    display: block;
+    margin: 40px auto;
+}
+footer{
+    background-color:#2a2a40;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+footer a{
+    color: white;
+}
